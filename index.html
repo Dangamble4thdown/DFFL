@@ -7,164 +7,132 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
-            overflow: hidden;
-        }
-
-        .header {
-            background: url('https://media-hosting.imagekit.io//470dba51f17d44b3/Screenshot%202024-12-10%20091722.png?Expires=1734015014&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Rtzk5t1l~Q8tKXuDEImkdSzGVthURc-vwiZc6KKXMVe55dlQMdRJMaVwrFlEkesY4LnP9Q49qOp5WZnhqBVEuS1bXyD7ozrFlWz51~kiMRCEguQKb9EJ6XKFgJNG~65L7XuurZK3poSfVO1M3LC36ssO0n2hr4qKLhlaTamvPEPcfeoIEZYNUcldi8NS6X9SuUhSds9AwEIcC1O2hxHyyOSRTIyPw2OWkWega8HKEBqQDHpp0~H7EMThYtph9vDMzdzpuph9sAgcC0tH0WPoUTec9LVTXsITFYTdxugVkuQDUTpz0tOBGqDp83LA6BLrp13i60XC-DStdWVnDr7EEQ__'); 
+            background: url('https://media-hosting.imagekit.io//470dba51f17d44b3/Screenshot%202024-12-10%20091722.png?Expires=1734015014&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Rtzk5t1l~Q8tKXuDEImkdSzGVthURc-vwiZc6KKXMVe55dlQMdRJMaVwrFlEkesY4LnP9Q49qOp5WZnhqBVEuS1bXyD7ozrFlWz51~kiMRCEguQKb9EJ6XKFgJNG~65L7XuurZK3poSfVO1M3LC36ssO0n2hr4qKLhlaTamvPEPcfeoIEZYNUcldi8NS6X9SuUhSds9AwEIcC1O2hxHyyOSRTIyPw2OWkWega8HKEBqQDHpp0~H7EMThYtph9vDMzdzpuph9sAgcC0tH0WPoUTec9LVTXsITFYTdxugVkuQDUTpz0tOBGqDp83LA6BLrp13i60XC-DStdWVnDr7EEQ__') no-repeat center center fixed;
             background-size: cover;
-            background-position: center;
-            height: 50vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .header h1 {
             color: white;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .header {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            display: inline-block;
+            margin: 20px auto;
+        }
+        h1 {
+            color: gold;
             font-size: 3rem;
         }
-
         .icon {
-            position: absolute;
+            position: fixed;
             top: 10px;
             left: 10px;
             width: 50px;
             height: 50px;
-            background-image: url('https://larrybrownsports.com/wp-content/uploads/2022/01/Antonio-Brown-strips-clothes-768x451.jpg');
+            background: url('https://larrybrownsports.com/wp-content/uploads/2022/01/Antonio-Brown-strips-clothes-768x451.jpg') no-repeat center;
             background-size: cover;
-            background-position: center;
+            border-radius: 50%;
         }
-
-        .news, .waiver-wire, .standings, .playoff-picture, .rulebook {
-            margin: 20px;
-            padding: 15px;
+        .section {
+            margin: 20px auto;
+            width: 90%;
+            max-width: 1200px;
+            background-color: rgba(0, 0, 0, 0.8);
             border-radius: 10px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
         }
-
-        .waiver-wire li, .news-list li {
-            margin-bottom: 10px;
-        }
-
-        .playoff-picture img, .standings img {
+        .section img {
             width: 100%;
             border-radius: 10px;
         }
-
-        audio {
-            display: none;
-        }
-
-        .snowflakes {
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 9999;
-            pointer-events: none;
-        }
-
-        .snowflake {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            background-color: white;
-            border-radius: 50%;
-            opacity: 0.8;
-            animation: fall 10s linear infinite;
-        }
-
-        @keyframes fall {
-            0% {
-                transform: translateY(0);
-            }
-            100% {
-                transform: translateY(100vh);
-            }
-        }
-
         iframe {
             width: 100%;
             height: 500px;
             border: none;
         }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: gold;
+            color: black;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: orange;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Snowflakes -->
-    <div class="snowflakes">
-        <div class="snowflake" style="left: 10%; animation-duration: 10s;"></div>
-        <div class="snowflake" style="left: 20%; animation-duration: 12s;"></div>
-        <div class="snowflake" style="left: 30%; animation-duration: 14s;"></div>
-        <div class="snowflake" style="left: 40%; animation-duration: 16s;"></div>
-        <div class="snowflake" style="left: 50%; animation-duration: 18s;"></div>
-    </div>
-
-    <!-- Background Music -->
-    <audio autoplay loop>
+    <audio id="background-music" autoplay loop>
         <source src="https://youtu.be/37-AlmNdESg" type="audio/mpeg">
     </audio>
 
     <div class="icon"></div>
-    
+
     <div class="header">
         <h1>Diab Fantasy Football League (DFFL)</h1>
     </div>
 
-    <!-- News Section -->
-    <div class="news">
-        <h2>News</h2>
-        <p>Welcome to the latest update of the Diab Fantasy Football League! Here’s an overview of each team’s performance, grades, and power rankings based on their recent games.</p>
-        
-        <h3>Team Performance: Week 14 Analysis</h3>
-        <p><strong>Hurts Go Good</strong> had a stellar showing last week, with standout performances from Jalen Hurts and Miles Sanders. They remain one of the top contenders, holding a strong position in the league.</p>
-        <p><strong>Injured Reserve</strong> continues to struggle with injuries but managed to pull off a win. They'll need to stay healthy if they want to remain in the playoff race.</p>
-        <p><strong>Power Rankings:</strong></p>
-        <ol>
-            <li>Hurts Go Good</li>
-            <li>Android Nightmares</li>
-            <li>Team theLionChamp</li>
-            <li>Team PierrotClub</li>
-        </ol>
-
-        <button onclick="playNewsMusic()">Play News Music</button>
+    <div class="section">
+        <h2>News Panel</h2>
+        <p>Get the latest updates, grades, and power rankings for Week 14.</p>
+        <ul>
+            <li><strong>Hurts So Good:</strong> Dominating Week 14 with stellar performances from Jalen Hurts and A.J. Brown. Grade: A+</li>
+            <li><strong>Android Nightmares:</strong> Impressive showing from the bench. Power Ranking: #2.</li>
+            <li><strong>Team LionChamp:</strong> Slipped due to injuries. Power Ranking: #3.</li>
+        </ul>
+        <button class="btn" onclick="playNewsMusic()">Play News Music</button>
     </div>
 
-    <!-- Waiver Wire Section -->
-    <div class="waiver-wire">
+    <div class="section">
         <h2>Waiver Wire Picks</h2>
         <ul>
-            <li><strong>Isaiah Davis (RB, NYJ):</strong> A rookie gaining more touches due to injuries in the Jets backfield. A solid pickup if you need depth at running back.</li>
-            <li><strong>Khalil Herbert (RB, CHI):</strong> With the Bears struggling in the running game, Herbert could be in line for increased carries. A good speculative add if you're thin at RB.</li>
-            <li><strong>Rashod Bateman (WR, BAL):</strong> Bateman’s upside is high, and with more passing opportunities opening up in the Ravens offense, he could be a great add for your WR corps.</li>
+            <li><strong>1. Isaiah Davis (RB, NYJ):</strong> Potential for increased touches due to injuries.</li>
+            <li><strong>2. Khalil Herbert (RB, CHI):</strong> Could dominate backfield with favorable matchups.</li>
+            <li><strong>3. Rashod Bateman (WR, BAL):</strong> High upside in the Ravens' passing game.</li>
+            <li><strong>4. Justice Hill (RB, BAL):</strong> Strong sleeper with red-zone carries.</li>
+            <li><strong>5. Roschon Johnson (RB, CHI):</strong> Future workhorse for Chicago.</li>
+            <li><strong>6. Devin Singletary (RB, HOU):</strong> Reliable bench stash for deep leagues.</li>
+            <li><strong>7. Jaylen Wright (RB, MIA):</strong> Could provide depth in Week 14.</li>
+            <li><strong>8. Michael Wilson (WR, ARI):</strong> Emerging WR with consistent targets.</li>
+            <li><strong>9. Dalton Schultz (TE, HOU):</strong> Solid red-zone target in need of a tight end.</li>
+            <li><strong>10. Noah Fant (TE, SEA):</strong> Underrated TE with steady PPR production.</li>
         </ul>
     </div>
 
-    <!-- Standings Section -->
-    <div class="standings">
+    <div class="section">
         <h2>Standings</h2>
         <img src="https://media-hosting.imagekit.io//3cb722f9059c4ed1/Screenshot%202024-12-10%20091602.png?Expires=1734015014&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=hqPLlcoT8uAAh5u1ufVMeOMBHDVt0m5AppkwLHqimbnpdaDWlzCwr9W8zvSCtErO4yLsoDUAzqET4bfI1QBmksSRc5rPsGXNuDSDXCxtzgtNPIzs~zI1iEokr12pg1Uh4Qc3W-De8U5MxbSIoXwdp7BbieDdu8MuvBQn~Imkw5AyaPVTkCRLpxOnrxNaUdLIWkSChoeXx9keO7icZ~UKFor~ruw4x8CCKUw1kVWS~U-KXfxLGq75-lR~-XuOW2CXpNU-GK1QUJTJvj1ngFvt~RRzbDOC-J6q7LcueUqYf77XwxByGNs8C2QwRFSmShMiU9Uh0nEUEPJwlTfUDXIxYQ__" alt="Standings">
     </div>
 
-    <!-- Playoff Picture Section -->
-    <div class="playoff-picture">
+    <div class="section">
         <h2>Playoff Picture</h2>
         <img src="https://media-hosting.imagekit.io//470dba51f17d44b3/Screenshot%202024-12-10%20091722.png?Expires=1734015014&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Rtzk5t1l~Q8tKXuDEImkdSzGVthURc-vwiZc6KKXMVe55dlQMdRJMaVwrFlEkesY4LnP9Q49qOp5WZnhqBVEuS1bXyD7ozrFlWz51~kiMRCEguQKb9EJ6XKFgJNG~65L7XuurZK3poSfVO1M3LC36ssO0n2hr4qKLhlaTamvPEPcfeoIEZYNUcldi8NS6X9SuUhSds9AwEIcC1O2hxHyyOSRTIyPw2OWkWega8HKEBqQDHpp0~H7EMThYtph9vDMzdzpuph9sAgcC0tH0WPoUTec9LVTXsITFYTdxugVkuQDUTpz0tOBGqDp83LA6BLrp13i60XC-DStdWVnDr7EEQ__" alt="Playoff Picture">
     </div>
 
-    <!-- Rulebook Section -->
-    <div class="rulebook">
+    <div class="section">
         <h2>Rulebook</h2>
-        <iframe src="URL_TO_RULEBOOK" width="100%" height="500px" style="border:none;"></iframe>
+        <iframe src="https://docs.google.com/document/d/e/2PACX-1vTkFlha5UmqF9QZAD-EkG8VktD4DjIQFTro9BYF7T5Vp8PF0GgfWiNlM-BDuOKEDkq91uiQTVt7sSET/pub"></iframe>
     </div>
 
     <script>
         function playNewsMusic() {
-            var audio = new Audio('https://youtu.be/RKiU2AypOH0');
+            const audio = new Audio('https://youtu.be/RKiU2AypOH0');
             audio.play();
         }
     </script>
