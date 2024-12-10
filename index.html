@@ -85,6 +85,12 @@
                 transform: translateY(100vh);
             }
         }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
     </style>
 </head>
 <body>
@@ -112,21 +118,29 @@
     <!-- News Section -->
     <div class="news">
         <h2>News</h2>
-        <ul class="news-list">
-            <li>Analysis of each team’s performance with grades and power rankings.</li>
-        </ul>
+        <p>Welcome to the latest update of the Diab Fantasy Football League! Here’s an overview of each team’s performance, grades, and power rankings based on their recent games.</p>
+        
+        <h3>Team Performance: Week 14 Analysis</h3>
+        <p><strong>Hurts Go Good</strong> had a stellar showing last week, with standout performances from Jalen Hurts and Miles Sanders. They remain one of the top contenders, holding a strong position in the league.</p>
+        <p><strong>Injured Reserve</strong> continues to struggle with injuries but managed to pull off a win. They'll need to stay healthy if they want to remain in the playoff race.</p>
+        <p><strong>Power Rankings:</strong></p>
+        <ol>
+            <li>Hurts Go Good</li>
+            <li>Android Nightmares</li>
+            <li>Team theLionChamp</li>
+            <li>Team PierrotClub</li>
+        </ol>
+
         <button onclick="playNewsMusic()">Play News Music</button>
     </div>
 
     <!-- Waiver Wire Section -->
     <div class="waiver-wire">
-        <h2>Waiver Wire</h2>
+        <h2>Waiver Wire Picks</h2>
         <ul>
-            <!-- Example Waiver Wire Player List -->
-            <li>C.J. Stroud -Easy-ish schedule</li>
-            <li>Isaiah Davis - Backup to Braelon, Lots of Redzone touches</li>
-            <li>Pat Friermuth - Great TE option, currently TE15</li>
-            <!-- Add more players as needed -->
+            <li><strong>Isaiah Davis (RB, NYJ):</strong> A rookie gaining more touches due to injuries in the Jets backfield. A solid pickup if you need depth at running back.</li>
+            <li><strong>Khalil Herbert (RB, CHI):</strong> With the Bears struggling in the running game, Herbert could be in line for increased carries. A good speculative add if you're thin at RB.</li>
+            <li><strong>Rashod Bateman (WR, BAL):</strong> Bateman’s upside is high, and with more passing opportunities opening up in the Ravens offense, he could be a great add for your WR corps.</li>
         </ul>
     </div>
 
@@ -145,7 +159,7 @@
     <!-- Rulebook Section -->
     <div class="rulebook">
         <h2>Rulebook</h2>
-        <iframe src="https://docs.google.com/document/d/e/2PACX-1vTkFlha5UmqF9QZAD-EkG8VktD4DjIQFTro9BYF7T5Vp8PF0GgfWiNlM-BDuOKEDkq91uiQTVt7sSET/pub" width="100%" height="500px" style="border:none;"></iframe>
+        <iframe src="URL_TO_RULEBOOK" width="100%" height="500px" style="border:none;"></iframe>
     </div>
 
     <script>
