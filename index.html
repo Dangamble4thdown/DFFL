@@ -4,139 +4,148 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diab Fantasy Football League (DFFL)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #8b0000; /* Warm red for Christmas theme */
+            --secondary-color: #228b22; /* Green for Christmas theme */
+            --background-gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            --text-color: #fff;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background: url('https://images.unsplash.com/photo-1543877087-ebf71ed58b06') no-repeat center center fixed;
-            background-size: cover;
-            color: white;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
+            background: var(--background-gradient);
+            color: var(--text-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 1.5rem 0;
             text-align: center;
+            font-size: 2rem;
+            font-weight: 600;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
         }
-        .header {
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 10px;
-            margin: 20px auto;
-            text-align: center;
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(44, 44, 60, 0.9);
+            padding: 0.8rem 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
-        h1 {
-            color: gold;
-            font-size: 3rem;
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+            padding: 0.7rem 1.2rem;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: background 0.3s, color 0.3s;
         }
-        .section {
-            margin: 20px auto;
-            width: 90%;
+
+        nav a:hover {
+            background-color: var(--secondary-color);
+            color: #fff;
+        }
+
+        main {
+            padding: 3rem 2rem;
             max-width: 1200px;
-            background-color: rgba(0, 0, 0, 0.8);
+            margin: 0 auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: var(--primary-color);
+            color: #fff;
+            font-weight: 400;
+        }
+
+        .content-section {
+            background: rgba(44, 44, 60, 0.9);
+            padding: 2rem;
+            margin: 1.5rem 0;
             border-radius: 10px;
-            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
-        .section img {
-            width: 100%;
-            border-radius: 10px;
-        }
-        iframe {
-            width: 100%;
-            height: 500px;
-            border: none;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        ul li {
-            margin: 10px 0;
-            padding: 10px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 5px;
-        }
-        .btn {
-            padding: 10px 20px;
-            background-color: gold;
-            color: black;
-            font-weight: bold;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .btn:hover {
-            background-color: orange;
+
+        .content-section h2 {
+            color: var(--secondary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
         }
     </style>
 </head>
 <body>
+<header>
+    <img src="https://larrybrownsports.com/wp-content/uploads/2022/01/Antonio-Brown-strips-clothes-768x451.jpg" alt="Football Icon" style="width: 50px; border-radius: 50%;">
+    <span>Diab Fantasy Football League</span>
+</header>
 
-    <!-- Christmas-themed autoplay music -->
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/37-AlmNdESg?si=ZXQeKxOvs58yM8l5&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<!-- YouTube video embed with autoplay -->
+<iframe 
+    width="560" 
+    height="315" 
+    src="https://www.youtube.com/embed/37-AlmNdESg?autoplay=1&mute=0&loop=1&playlist=37-AlmNdESg" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    allowfullscreen>
+</iframe>
 
-    <div class="header">
-        <h1>Diab Fantasy Football League (DFFL)</h1>
-    </div>
+<nav>
+    <a href="#home">Home</a>
+    <a href="#news">News</a>
+    <a href="#rules">Rules</a>
+    <a href="#standings">Standings</a>
+    <a href="#stats">Stats</a>
+    <a href="#playoff">Playoff Picture</a>
+    <a href="#champion">Champion</a>
+</nav>
 
-    <!-- Game-by-Game Analysis -->
-    <div class="section">
-        <h2>Game-by-Game Analysis (Week 15)</h2>
+<main>
+    <section id="home" class="content-section">
+        <h2>Welcome to the Diab Fantasy Football League</h2>
+        <p>Join the excitement and compete for the ultimate title of Fantasy Champion!</p>
+    </section>
+
+    <section id="news" class="content-section">
+        <h2>Latest News</h2>
         <ul>
-            <li><strong>Team Louisdiab vs. ScottyK37:</strong> A dominant win by ScottyK37. Louisdiab failed to leverage their star players effectively. Grade: B-.</li>
-            <li><strong>Team PeteDiab vs. AlexSeguin:</strong> A closely contested game with AlexSeguin edging out PeteDiab. Grade: A-.</li>
-            <li><strong>Team PierreDiab vs. LeeMastro:</strong> PierreDiab displayed strategic bench management for a decisive victory. Grade: A.</li>
-            <li><strong>Grabka vs. bdiab:</strong> Grabka secured an easy win due to poor lineup decisions from bdiab. Grade: C+.</li>
-            <li><strong>thesungawd vs. theLionsChamp:</strong> thesungawd’s consistent lineup secured a narrow win. Grade: B+.</li>
-            <li><strong>NickSeguin vs. Injured Reserve:</strong> Injured Reserve managed their depth well and capitalized on NickSeguin's underperformance. Grade: A-.</li>
+            <li><strong>Louisdiab vs. ScottyK37:</strong> ScottyK37 dominates with a strategic lineup! Grade: A.</li>
+            <li><strong>AlexSeguin vs. PeteDiab:</strong> AlexSeguin shows a clutch performance. Grade: A-.</li>
+            <li><strong>Grabka vs. theLionsChamp:</strong> Grabka clinches the win with strong bench depth. Grade: B+.</li>
         </ul>
-    </div>
+    </section>
 
-    <!-- Power Rankings & Predictions -->
-    <div class="section">
-        <h2>Power Rankings & Predictions</h2>
-        <p>Top 6 Records (Playoff Bound):</p>
-        <ol>
-            <li><strong>1. ScottyK37:</strong> Consistent dominance across all weeks.</li>
-            <li><strong>2. AlexSeguin:</strong> Strategic lineup decisions make them a favorite.</li>
-            <li><strong>3. PierreDiab:</strong> Excellent roster depth and key performances.</li>
-            <li><strong>4. Louisdiab:</strong> Great early-season performance but needs consistency.</li>
-            <li><strong>5. LeeMastro:</strong> Sneaky underdog with potential for an upset.</li>
-            <li><strong>6. thesungawd:</strong> Just made it in but carries momentum.</li>
-        </ol>
-        <p><strong>Prediction:</strong> ScottyK37 is the favorite to win due to their well-rounded lineup and consistent point totals throughout the season.</p>
-    </div>
-
-    <!-- Waiver Wire Picks -->
-    <div class="section">
-        <h2>Waiver Wire Picks</h2>
-        <ul>
-            <li><strong>1. Tyjae Spears (RB, TEN):</strong> With Derrick Henry banged up, Spears could see a massive workload.</li>
-            <li><strong>2. Elijah Moore (WR, CLE):</strong> Emerging as a top target with Watson's improved play.</li>
-            <li><strong>3. Devin Singletary (RB, HOU):</strong> Consistent touches make him a solid PPR pickup.</li>
-            <li><strong>4. Juwan Johnson (TE, NO):</strong> Reliable red-zone target, especially in depleted Saints offense.</li>
-            <li><strong>5. Justice Hill (RB, BAL):</strong> Great for deeper leagues with steady workload potential.</li>
-            <li><strong>6. Josh Downs (WR, IND):</strong> Rookie wideout is quickly earning trust in the passing game.</li>
-            <li><strong>7. Rashod Bateman (WR, BAL):</strong> Finally healthy and showing flashes of WR2 potential.</li>
-            <li><strong>8. Jerome Ford (RB, CLE):</strong> High-volume backup with standalone flex value.</li>
-            <li><strong>9. Michael Wilson (WR, ARI):</strong> Emerging as a reliable WR3 with upside.</li>
-            <li><strong>10. Dalton Schultz (TE, HOU):</strong> Elite TE option for those lacking depth.</li>
-        </ul>
-    </div>
-
-    <!-- Playoff Picture -->
-    <div class="section">
-        <h2>Playoff Picture</h2>
-        <img src="https://media-hosting.imagekit.io//470dba51f17d44b3/Screenshot%202024-12-10%20091722.png?Expires=1734015014&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Rtzk5t1l~Q8tKXuDEImkdSzGVthURc-vwiZc6KKXMVe55dlQMdRJMaVwrFlEkesY4LnP9Q49qOp5WZnhqBVEuS1bXyD7ozrFlWz51~kiMRCEguQKb9EJ6XKFgJNG~65L7XuurZK3poSfVO1M3LC36ssO0n2hr4qKLhlaTamvPEPcfeoIEZYNUcldi8NS6X9SuUhSds9AwEIcC1O2hxHyyOSRTIyPw2OWkWega8HKEBqQDHpp0~H7EMThYtph9vDMzdzpuph9sAgcC0tH0WPoUTec9LVTXsITFYTdxugVkuQDUTpz0tOBGqDp83LA6BLrp13i60XC-DStdWVnDr7EEQ__" alt="Playoff Picture">
-    </div>
-
-    <!-- Rulebook -->
-    <div class="section">
-        <h2>Rulebook</h2>
+    <section id="rules" class="content-section">
+        <h2>Rules</h2>
         <iframe src="https://docs.google.com/document/d/e/2PACX-1vTkFlha5UmqF9QZAD-EkG8VktD4DjIQFTro9BYF7T5Vp8PF0GgfWiNlM-BDuOKEDkq91uiQTVt7sSET/pub"></iframe>
-    </div>
+    </section>
 
-    <script>
-        function playNewsMusic() {
-            const audio = new Audio('https://youtu.be/RKiU2AypOH0');
-            audio.play();
-        }
-    </script>
+    <section id="standings" class="content-section">
+        <h2>Standings</h2>
+        <img src="https://media-hosting.imagekit.io//3cb722f9059c4ed1/Screenshot%202024-12-10%20091602.png" alt="Standings Image">
+    </section>
+
+    <section id="playoff" class="content-section">
+        <h2>Playoff Picture</h2>
+        <img src="https://media-hosting.imagekit.io//470dba51f17d44b3/Screenshot%202024-12-10%20091722.png" alt="Playoff Picture">
+    </section>
+</main>
+
+<footer>
+    &copy; 2024 Diab Fantasy Football League. All rights reserved.
+</footer>
 </body>
 </html>
